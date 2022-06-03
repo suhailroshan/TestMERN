@@ -54,10 +54,7 @@ export default class MaterialLogin extends React.Component {
   }
 
   login = () => {
-    if (this.state.uname == "" || this.state.pwd == "") {
-      alert("Please enter user name and password");
-      return false;
-    }
+   
     fetch("https://reqres.in/api/login", {
       method: "POST",
       headers: {
@@ -72,7 +69,7 @@ export default class MaterialLogin extends React.Component {
       .then((res) => res.json())
       .then((resJson) => {
         if (resJson.token !== null && resJson.token !== undefined) {
-          alert("Login successfull. Welcome " + "Eve");
+          alert("Login successfull");
         } else {
           alert("Login failed. Please check your user name and password");
         }
