@@ -2,6 +2,7 @@ import React from "react";
 // import InputLabel from '@mui/material/InputLabel';
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 // import { Avatar, List, ListItem, ListItemAvatar, ListItemText, IconButton, Icon } from "@mui/material";
 
 export default class MaterialLogin extends React.Component {
@@ -28,27 +29,37 @@ export default class MaterialLogin extends React.Component {
   render() {
     return (
       <div>
-        <br />
+         <Box
+        sx={{
+          width: 400,
+          height: "auto",
+          marginLeft: 50,
+        }}
+      >
+         <br />
        
-        <TextField
-          id="username"
-          label="Username"
-          variant="outlined"
-          onChange={this.handleUnameOnChange}
-        />
-        <br /> <br />
-        <TextField
-          id="password"
-          type="password"
-          label="Password"
-          variant="outlined"
-          onChange={this.handlePwdOnChange}
-        />
-        <br />
-        <br />
-        <Button variant="contained" onClick={this.login}>
-          Login
-        </Button>
+       <TextField
+         id="username"
+         label="Username"
+         variant="outlined"
+         onChange={this.handleUnameOnChange}
+       />
+       <br /> <br />
+       <TextField
+         id="password"
+         type="password"
+         label="Password"
+         variant="outlined"
+         onChange={this.handlePwdOnChange}
+       />
+       <br />
+       <br />
+       <Button variant="contained" onClick={this.login}>
+         Login
+       </Button>
+
+      </Box>
+       
       </div>
     );
   }
